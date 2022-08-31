@@ -1,0 +1,148 @@
+.service {
+  padding: 4rem 0;
+
+  &-container {
+    &__data {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-item {
+        text-align: center;
+        font-size: 1.5rem;
+
+        &__name {
+          color: #0056ad;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &__desc {
+      padding: 5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 55%;
+      }
+      &-left {
+        width: 45%;
+
+        &__header {
+          font-size: 1.5rem;
+          color: #0056ad;
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+        &__body {
+          &-item {
+            margin: 1.3rem 0;
+            color: #16161a;
+
+            &__title {
+              display: flex;
+              align-items: center;
+              margin-bottom: 0.5rem;
+
+              span {
+                &:nth-child(1) {
+                  color: #0056ad;
+                  margin-left: 0.5rem;
+                }
+                &:nth-child(2) {
+                  font-size: 1.1rem;
+                  color: #16161a;
+                  font-weight: 500;
+                }
+              }
+            }
+            &__subtitle {
+              text-align: justify;
+              font-size: 1.05rem;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+
+    @media screen and (max-width : 992px){
+      
+      &__desc{
+
+        &-left{
+
+          &__header{
+            font-size: 1.2rem;
+          }
+          &__body{
+
+            &-item{
+
+              
+              &__subtitle{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width : 768px){
+      
+      &__desc{
+        flex-direction: column;
+        &-left{
+          width: 100%;
+          &__header{
+            font-size: 1.2rem;
+          }
+          &__body{
+
+            &-item{
+
+              
+              &__subtitle{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width : 768px){
+      
+      &__desc{
+        flex-direction: column;
+        &-left{
+          width: 90%;
+          margin: 1rem auto;
+
+          &__header{
+            font-size: 1.2rem;
+          }
+          &__body{
+
+            &-item{
+
+              
+              &__subtitle{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        img{
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

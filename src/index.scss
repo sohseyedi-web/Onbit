@@ -1,0 +1,39 @@
+@import url("https://v1.fontapi.ir/css/Shabnam");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Shabnam", sans-serif, monospace;
+}
+
+body{
+  background-color: #fefefe;
+  color: #16161a;
+}
+
+body::-webkit-scrollbar {
+  width: .6em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0056ad;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit !important;
+}
+a:hover {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}

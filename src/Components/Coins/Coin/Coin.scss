@@ -1,0 +1,76 @@
+.coin {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  &-detail {
+    flex: 0.2;
+    color: #16161a;
+    padding: 0 0.7rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid #0056ad;
+
+    &__img {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    &__desc {
+      text-align: justify;
+    }
+    &__name,
+    &__rank,
+    &__market,
+    &__price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+    &__save {
+      width: 100%;
+
+      button {
+        width: 100%;
+        border: none;
+        color: #fff;
+        height: 40px;
+        border-radius: 0.5rem;
+      }
+
+      &-unfollow {
+        background-color: #df2020;
+      }
+      &-follow {
+        background-color: #0056ad;
+      }
+    }
+  }
+  &-chart {
+    flex: 0.8;
+  }
+
+  @media screen and (max-width: 1248px) {
+    flex-direction: column;
+
+    &-detail {
+      flex: 1;
+
+      &__desc {
+        display: none;
+      }
+      &__save {
+        button {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    &-chart {
+      flex: 1;
+    }
+  }
+}

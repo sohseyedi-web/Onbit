@@ -1,0 +1,36 @@
+.navs {
+  background-color: #fff;
+  padding: 0.8rem 0;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+
+      &-auth {
+        margin-right: 1.5rem;
+        color: #0056ad;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      &-tell{
+        color: #0056ad;
+      }
+    }
+  }
+}

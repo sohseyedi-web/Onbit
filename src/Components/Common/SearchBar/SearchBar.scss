@@ -1,0 +1,27 @@
+.form {
+  position: relative;
+  width: 30%;
+
+  input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    outline: none;
+    height: 40px;
+    padding-left: 3rem;
+  }
+  span {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    color: #0056ad;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 550px) {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}

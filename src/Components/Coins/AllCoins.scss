@@ -1,0 +1,215 @@
+.coins {
+  padding: 4rem 0;
+
+  &-container {
+    &__bars {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0056ad;
+      }
+    }
+    &__items {
+      padding: 3rem 0;
+
+      &-loading {
+        width: 100%;
+        text-align: center;
+      }
+      &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+        padding: 0.5rem 0.3rem;
+        background-color: #eee;
+        border-radius: 0.3rem;
+
+        &__detail {
+          display: flex;
+          align-items: center;
+          flex: 0.2;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+          &-name {
+            margin-left: 0.8rem;
+
+            &__symbol {
+              text-transform: uppercase;
+            }
+            &__full {
+              font-size: 0.8rem;
+              opacity: 0.8;
+            }
+          }
+        }
+        &__price {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex: 0.5;
+          font-size: 1.1rem;
+          color: #16161a;
+
+          &-current,
+          &-market {
+            font-weight: 500;
+            flex: 0.4;
+            text-align: left;
+          }
+          &-market {
+            text-align: right;
+          }
+          &-change {
+            flex: 0.1;
+            font-size: 0.95rem;
+            &.min {
+              color: #df2020;
+            }
+            &.max {
+              color: #2b7a0b;
+            }
+          }
+        }
+        &__actions {
+          flex: 0.1;
+          display: flex;
+          align-items: center;
+
+          &-chart {
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.5rem;
+            background-color: #0056ad;
+            color: #eee;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.4s ease-in-out;
+            margin-left: 1em;
+
+            &:hover {
+              background-color: #16161a;
+              color: #0056ad;
+              transition: all 0.4s ease-in-out;
+            }
+          }
+
+          &-save {
+            background-color: transparent;
+            color: #16161a;
+            cursor: pointer;
+            border: none;
+
+            &.active-save {
+              color: #0056ad;
+              cursor: none;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      &__bars {
+        &-title {
+          font-size: 1.3rem;
+        }
+      }
+      &__items {
+        &-box {
+          &__price {
+            font-size: 1rem;
+
+            &-current,
+            &-market {
+              flex: 0.3;
+            }
+            &-change {
+              flex: 0.3;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      &__items {
+        &-box {
+          &__detail {
+            flex: 0.3;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+            &-name {
+              margin-left: 0.3rem;
+
+              &__full {
+                display: none;
+              }
+            }
+          }
+          &__price {
+            justify-content: center;
+            font-size: 1rem;
+            flex: 0.5;
+
+            &-current,
+            &-change {
+              flex: 0.4;
+            }
+            &-market {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      &__bars {
+        flex-direction: column-reverse;
+        &-title {
+          font-size: 1.3rem;
+        }
+      }
+      &__items {
+        &-box {
+          &__detail {
+            flex: 0.2;
+
+            img {
+              width: 30px;
+              height: 30px;
+            }
+
+            &-name {
+              margin-left: 0.2rem;
+            }
+          }
+          &__price {
+            font-size: 0.9rem;
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+            &-current {
+              text-align: center;
+            }
+          }
+          &__actions {
+            flex: 0.1;
+            &-chart {
+              padding: 0.4rem 0.9rem;
+              margin-left: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
