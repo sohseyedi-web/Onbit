@@ -14,13 +14,13 @@
         border-radius: 0.3rem;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
           rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-          line-height: 3;
+        line-height: 3;
 
         &__name {
           color: #0056ad;
           font-weight: 500;
-          font-size: .9rem;
-          padding: .2rem .6rem;
+          font-size: 0.9rem;
+          padding: 0.2rem 0.6rem;
         }
       }
     }
@@ -89,6 +89,14 @@
           }
         }
       }
+      &__data {
+        flex-wrap: wrap;
+
+        &-item {
+          width: 35%;
+          margin: 0.5rem 0;
+        }
+      }
     }
     @media screen and (max-width: 768px) {
       &__desc {
@@ -111,7 +119,7 @@
         }
       }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 550px) {
       &__desc {
         flex-direction: column;
         &-left {
@@ -132,6 +140,14 @@
         img {
           width: 90%;
           margin: 0 auto;
+        }
+      }
+      &__data {
+        flex-direction: column;
+
+        &-item {
+          width: 90%;
+          margin: 0.5rem auto;
         }
       }
     }
