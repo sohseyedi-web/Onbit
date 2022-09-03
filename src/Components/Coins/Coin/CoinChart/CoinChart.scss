@@ -1,12 +1,11 @@
 .chart {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  padding-top: 1rem;
 
   &-btn {
-    width: 22%;
+    width: 25%;
     background-color: transparent;
     border-radius: 0.3rem;
     border: none;
@@ -15,6 +14,7 @@
     font-size: 1.1rem;
     border: 2px solid #0056ad;
     transition: all 0.4s ease-in-out;
+    margin:0 1rem;
     &:hover,
     &.active-btn {
       transition: all 0.4s ease-in-out;

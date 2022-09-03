@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Container from "../../../Container/Container";
 import { SingleCoin } from "../../Config/api";
 import { comma } from "./../../../utils/Comma";
@@ -8,6 +8,7 @@ import "./Coin.scss";
 import CoinChart from "./CoinChart/CoinChart";
 import { checkInList } from "./../../../utils/CheckInList";
 import { useProduct, useProductDispatch } from "../../../Context/Arz-Context";
+import {RiArrowRightLine} from 'react-icons/ri'
 import toast from "react-hot-toast";
 const Coin = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const Coin = () => {
     <Container>
       <section className="coin container" dir="rtl">
         <div className="coin-detail">
+          <Link className="coin-detail__link" to={"/coins"}><RiArrowRightLine size={26}/></Link>
           <div className="coin-detail__img">
             لوگو :{" "}
             {coin.image ? <img src={coin.image.small} alt={coin.name} /> : null}

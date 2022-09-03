@@ -9,21 +9,29 @@ const Service = () => {
         <div className="service-container__data">
           <div className="service-container__data-item">
             <div className="service-container__data-item__title">150,000+</div>
-            <div className="service-container__data-item__name">کاربر فعال</div>
+            <p className="service-container__data-item__name">
+              کاربر فعال به ما اعتماد کرده اند
+            </p>
+          </div>
+          <div className="service-container__data-item">
+            <div className="service-container__data-item__title">20+</div>
+            <p className="service-container__data-item__name">
+              ارز پولی در آنبیت پشتیبانی میشود
+            </p>
           </div>
           <div className="service-container__data-item">
             <div className="service-container__data-item__title">200+</div>
-            <div className="service-container__data-item__name">
-              ارز دیجیتال
-            </div>
+            <p className="service-container__data-item__name">
+              ارز دیجیتال در آنبیت معامله میشود
+            </p>
           </div>
           <div className="service-container__data-item">
             <div className="service-container__data-item__title">
               100,000,000+
             </div>
-            <div className="service-container__data-item__name">
-              تراکنش موفق
-            </div>
+            <p className="service-container__data-item__name">
+              تراکنش موفق در آنبیت انجام شده
+            </p>
           </div>
         </div>
         <div className="service-container__desc">

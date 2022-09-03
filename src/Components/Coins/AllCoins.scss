@@ -13,9 +13,46 @@
         color: #0056ad;
       }
     }
-    &__items {
-      padding: 3rem 0;
+    &__header {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #0056ad;
+      text-align: center;
+      padding: 0.7rem 0;
+      color: #ffff;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
 
+      &-name {
+        flex: 0.2;
+      }
+      &-price {
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__current,
+        &__market {
+          flex: 0.4;
+          text-align: left;
+        }
+        &__market {
+          text-align: right;
+        }
+        &__change {
+          flex: 0.2;
+        }
+      }
+      &-action {
+        flex: 0.1;
+      }
+    }
+    &__items {
       &-loading {
         width: 100%;
         text-align: center;
@@ -24,10 +61,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 1rem 0;
-        padding: 0.5rem 0.3rem;
+        padding: 0.7rem 0.3rem;
         background-color: #eee;
-        border-radius: 0.3rem;
+        border-bottom: 2px solid #ccc;
 
         &__detail {
           display: flex;
@@ -82,19 +118,17 @@
           flex: 0.1;
           display: flex;
           align-items: center;
+          justify-content: center;
 
           &-chart {
-            padding: 0.5rem 1.2rem;
             border-radius: 0.5rem;
-            background-color: #0056ad;
-            color: #eee;
+            color: #16161a;
             text-align: center;
             text-decoration: none;
             transition: all 0.4s ease-in-out;
             margin-left: 1em;
 
             &:hover {
-              background-color: #16161a;
               color: #0056ad;
               transition: all 0.4s ease-in-out;
             }
@@ -139,6 +173,21 @@
       }
     }
     @media screen and (max-width: 768px) {
+      &__header {
+        &-price {
+          &__change,
+          &__current {
+            flex: 0.4;
+            text-align: center;
+          }
+          &__current {
+            text-align: right;
+          }
+          &__market {
+            display: none;
+          }
+        }
+      }
       &__items {
         &-box {
           &__detail {
@@ -156,14 +205,14 @@
             }
           }
           &__price {
-            justify-content: center;
             font-size: 1rem;
-            flex: 0.5;
 
             &-current,
             &-change {
               flex: 0.4;
+              text-align: center;
             }
+
             &-market {
               display: none;
             }
@@ -176,6 +225,27 @@
         flex-direction: column-reverse;
         &-title {
           font-size: 1.3rem;
+        }
+      }
+      &__header {
+        &-name {
+          flex: 0.2;
+        }
+        &-price {
+          flex: 0.7;
+          font-size: 0.9rem;
+          justify-content: center;
+
+          &__current,
+          &__change {
+            text-align: left;
+          }
+          &__current {
+            padding-left: 1.5rem;
+          }
+        }
+        &-action {
+          flex: 0.1;
         }
       }
       &__items {
@@ -204,7 +274,6 @@
           &__actions {
             flex: 0.1;
             &-chart {
-              padding: 0.4rem 0.9rem;
               margin-left: 0.5em;
             }
           }
